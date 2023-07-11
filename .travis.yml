@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run kantapong/dev-test-deploy npm run coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'ap-southeast-2'
+  app: 'dev-test-deploy-workflow'
+  env: 'dev-test-deploy-workflow'
+  bucket_name: 'elasticbeanstalk-ap-southeast-2-536940935569'
+  bucket_path: 'dev-test-deploy-workflow'
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
