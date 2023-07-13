@@ -25,7 +25,7 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">HI chang2e</p>
+      <p className="read-the-docs">I was changed on the feature branch</p>
     </>
   )
 }
